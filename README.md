@@ -7,7 +7,7 @@ Facebook's Stetho for Cordova
 
 ## Install
 ```bash
-$ cordova plugin add com.bridge.stetho
+cordova plugin add com.bridge.stetho
 ```
 
 ## Usage
