@@ -13,6 +13,7 @@
       </feature>
     </config-file>
     <config-file parent="/*" target="AndroidManifest.xml"/>
+    <source-file src="src/android/stetho-1.0.1-fatjar.jar" target-dir="libs"/>
     <source-file src="src/android/Stetho.java" target-dir="src/com/bridge"/>
   </platform>
 </plugin>
