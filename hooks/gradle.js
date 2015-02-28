@@ -3,9 +3,9 @@ module.exports = function(context) {
   var exec = require('child_process').exec;
   var dfd  = new Q.defer();
 
-  console.log('Gradle hook fired');
-
-  exec('gradle getDeps', function() {
+  exec('gradle getDeps', {
+    cwd: context.opts.plugin.dir
+  }, function() {
     dfd.resolve();
     console.log('Dependencies downloaded for Stetho');
   });
