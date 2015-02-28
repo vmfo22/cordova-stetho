@@ -15,16 +15,5 @@
     <config-file parent="/*" target="AndroidManifest.xml"/>
     <source-file src="src/android/Stetho.java" target-dir="src/com/bridge"/>
   </platform>
-  <platform name="ios">
-    <config-file parent="/*" target="config.xml">
-      <feature name="Open">
-        <param name="ios-package" value="Open"/>
-      </feature>
-    </config-file>
-    <framework src="QuickLook.framework" />
-    <framework src="Foundation.framework" />
-    <source-file src="src/ios/Open.m"/>
-    <header-file src="src/ios/Open.h"/>
-  </platform>
   <dependency id="org.apache.cordova.file-transfer"/>
 </plugin>
