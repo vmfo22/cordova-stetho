@@ -1,5 +1,5 @@
 /**
- * Stetho.java
+ * CDVStetho.java
  *
  * Copyright (C) 2015 Carlos Antonio
  *
