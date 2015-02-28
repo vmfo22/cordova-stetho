@@ -1,4 +1,4 @@
 .local-vimrc
 .DS_Store
 .gradle
-build/tmp
+build/
