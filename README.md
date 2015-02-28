@@ -13,6 +13,12 @@ cordova plugin add com.bridge.stetho
 ## Usage
 Navigate to `chrome://inspect` and click "Inspect" to get started!
 
+## Dependencies
+- Node
+- Android SDK
+- Gradle
+
 ## Todo
+- [X] Dependency management
 - [ ] Configure network
 - [ ] Create plugin hook to add `<application android:name="com.bridge.CDVStetho">` in `AndroidManifest.xml`

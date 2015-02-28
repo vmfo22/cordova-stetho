@@ -1,0 +1,15 @@
+apply plugin: 'java'
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  compile 'com.facebook.stetho:stetho:1.0.1'
+  compile 'com.facebook.stetho:stetho-urlconnection:1.0.1'
+}
+
+task getDeps(type: Copy) {
+  from sourceSets.main.runtimeClasspath
+  into 'libs/'
+}
