@@ -14,6 +14,7 @@
     </config-file>
     <config-file parent="/*" target="AndroidManifest.xml"/>
     <source-file src="src/android/stetho-1.0.1-fatjar.jar" target-dir="libs"/>
+    <source-file src="src/android/stetho-okhttp-1.0.1.jar" target-dir="libs"/>
     <source-file src="src/android/CDVStetho.java" target-dir="src/com/bridge"/>
   </platform>
 </plugin>
