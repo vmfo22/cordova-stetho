@@ -6,9 +6,6 @@
   <keywords>cordova,file,open,intent,video,audio,image,photo,pdf</keywords>
   <repo>https://github.com/disusered/cordova-open</repo>
   <issue>https://github.com/disusered/cordova-open/issues</issue>
-  <js-module name="Open" src="www/bridge.open.js">
-    <merges target="cordova.plugins.bridge"/>
-  </js-module>
   <platform name="android">
     <config-file parent="/*" target="res/xml/config.xml">
       <feature name="Open">
