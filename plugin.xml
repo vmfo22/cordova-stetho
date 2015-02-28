@@ -15,6 +15,9 @@
     </config-file>
     <config-file parent="/*" target="AndroidManifest.xml"/>
     <source-file src="src/android/CDVStetho.java" target-dir="src/com/bridge"/>
-    <source-file src="build/libs/cordova-stetho.jar" target-dir="libs"/>
+    <source-file src="libs/commons-cli-1.2.jar" target-dir="libs"/>
+    <source-file src="libs/jsr305-2.0.1.jar" target-dir="libs"/>
+    <source-file src="libs/stetho-1.0.1.jar" target-dir="libs"/>
+    <source-file src="libs/stetho-urlconnection-1.0.1.jar" target-dir="libs"/>
   </platform>
 </plugin>
