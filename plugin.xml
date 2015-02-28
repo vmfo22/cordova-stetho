@@ -15,5 +15,4 @@
     <config-file parent="/*" target="AndroidManifest.xml"/>
     <source-file src="src/android/Stetho.java" target-dir="src/com/bridge"/>
   </platform>
-  <dependency id="org.apache.cordova.file-transfer"/>
 </plugin>
