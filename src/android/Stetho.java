@@ -1,5 +1,5 @@
 /**
- * Open.java
+ * Stetho.java
  *
  * Copyright (C) 2015 Carlos Antonio
  *
@@ -27,7 +27,7 @@ import android.os.Build;
 /**
  * This class starts an activity for an intent to view files
  */
-public class Open extends CordovaPlugin {
+public class Stetho extends CordovaPlugin {
 
   public static final String OPEN_ACTION = "open";
 
