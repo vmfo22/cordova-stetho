@@ -38,14 +38,6 @@ module.exports = function(context) {
         });
       });
     });
-  } else {
-    console.log('AndroidManifest.xml not found!');
-    console.log('This means the Android platform hasn\t been added to ' +
-                'the cordova project. Once added, Stetho won\'t work' +
-                'unless you add the following to the <application> node' +
-                'in /platforms/android/AndroidManifest.xml: ' +
-                'android:name="com.bridge.CDVStetho"');
-    console.log('Ex: <application ... android:name="com.bridge.CDVStetho">');
   }
 
   return dfd.promise;
