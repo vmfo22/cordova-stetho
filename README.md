@@ -1,7 +1,7 @@
 stetho
 ====
 
-[![Build Status](https://travis-ci.org/disusered/cordova-stetho.svg?branch=feature%2Ftravis)](https://travis-ci.org/disusered/cordova-stetho) [![Code Climate](https://codeclimate.com/github/disusered/cordova-stetho/badges/gpa.svg)](https://codeclimate.com/github/disusered/cordova-stetho) 
+[![Build Status](https://travis-ci.org/disusered/cordova-stetho.svg)](https://travis-ci.org/disusered/cordova-stetho) [![Code Climate](https://codeclimate.com/github/disusered/cordova-stetho/badges/gpa.svg)](https://codeclimate.com/github/disusered/cordova-stetho) 
 
 Facebook's Stetho for Cordova
 
