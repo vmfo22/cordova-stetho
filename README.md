@@ -19,11 +19,11 @@ Navigate to `chrome://inspect` and click "Inspect" to get started!
 
 ## Dependencies
 - Node
-- Android SDK
 - Gradle
+- Android SDK
 
 ## Todo
+- [ ] Network inspection
 - [X] Dependency management
-- [ ] Configure network
 - [X] Create plugin hook to add `<application android:name="com.bridge.CDVStetho">` in `AndroidManifest.xml`
-- [ ] Remove attribute on plugin uninstall
+- [X] Remove attribute on plugin uninstall
