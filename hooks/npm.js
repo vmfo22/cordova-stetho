@@ -3,11 +3,11 @@ module.exports = function(context) {
   var exec = require('child_process').exec;
   var dfd  = new Q.defer();
 
-  exec('gradle getDeps', {
+  exec('npm install xml2js --save-dev', {
     cwd: context.opts.plugin.dir
   }, function() {
     dfd.resolve();
-    console.log('cordova-stetho - Gradle dependencies installed');
+    console.log('cordova-stetho - Node modules installed');
   });
 
   return dfd.promise;

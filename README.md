@@ -5,6 +5,10 @@ stetho
 
 Facebook's Stetho for Cordova
 
+<a href="https://raw.githubusercontent.com/disusered/cordova-stetho/docs/stetho.png">
+  <img src="https://raw.githubusercontent.com/disusered/cordova-stetho/docs/stetho.png" width="480px" />
+</a>
+
 ## Install
 ```bash
 cordova plugin add com.bridge.stetho
@@ -21,4 +25,5 @@ Navigate to `chrome://inspect` and click "Inspect" to get started!
 ## Todo
 - [X] Dependency management
 - [ ] Configure network
-- [ ] Create plugin hook to add `<application android:name="com.bridge.CDVStetho">` in `AndroidManifest.xml`
+- [X] Create plugin hook to add `<application android:name="com.bridge.CDVStetho">` in `AndroidManifest.xml`
+- [ ] Remove attribute on plugin uninstall
