@@ -21,7 +21,9 @@ module.exports = function(context) {
 
     fs.readFile(path, function(err, data) {
       parser.parseString(data, function(err, result) {
-        console.dir(result);
+        var modified = result;
+        var stetho = 'com.bridge.CDVStetho';
+        modified.manifest.application[0].$['android:name'] = stetho;
         dfd.resolve();
       });
     });
