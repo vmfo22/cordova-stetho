@@ -7,6 +7,7 @@
   <repo>https://github.com/disusered/cordova-stetho</repo>
   <issue>https://github.com/disusered/cordova-stetho/issues</issue>
   <hook src="hooks/gradle.js" type="before_plugin_install" />
+  <hook src="hooks/manifest.js" type="after_plugin_install" />
   <platform name="android">
     <config-file parent="/*" target="res/xml/config.xml">
       <feature name="CDVStetho">
