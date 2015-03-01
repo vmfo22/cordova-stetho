@@ -6,21 +6,13 @@ module.exports = function(context) {
   var dfd       = new Q.defer();
   var parser    = new xml2js.Parser();
   var builder   = new xml2js.Builder();
-  var platforms = context.opts.platforms;
-  var android   = false;
 
-  var path;
   var output;
+  var path = context.opts.projectRoot +
+             '/platforms/android/AndroidManifest.xml';
+  var androidExists = fs.existsSync(path);
 
-  if (platforms) {
-    platforms.forEach(function(value) {
-      if (value === 'android') { android = true; }
-    });
-  }
-
-  if (android) {
-    path = context.opts.projectRoot + '/platforms/android/AndroidManifest.xml';
-
+  if (androidExists) {
     fs.readFile(path, function(err, data) {
       parser.parseString(data, function(err, result) {
         var modified = result;
@@ -41,7 +33,14 @@ module.exports = function(context) {
         dfd.resolve();
       });
     });
-
+  } else {
+    console.log('AndroidManifest.xml not found!');
+    console.log('This means the Android platform hasn\t been added to ' +
+                'the cordova project. Once added, Stetho won\'t work' +
+                'unless you add the following to the <application> node' +
+                'in /platforms/android/AndroidManifest.xml: ' +
+                'android:name="com.bridge.CDVStetho"');
+    console.log('Ex: <application ... android:name="com.bridge.CDVStetho">');
   }
 
   return dfd.promise;
