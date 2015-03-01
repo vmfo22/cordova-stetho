@@ -18,9 +18,9 @@ cordova plugin add com.bridge.stetho
 Navigate to `chrome://inspect` and click "Inspect" to get started!
 
 ## Dependencies
-- Node
-- Gradle
-- Android SDK
+- [Node](http://nodejs.org/)
+- [Gradle](https://gradle.org/)
+- [Android SDK](http://developer.android.com/sdk/installing/index.html?pkg=tools)
 
 ## Todo
 - [ ] Network inspection
