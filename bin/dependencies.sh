@@ -5,8 +5,8 @@ set -ev
 npm install -g cordova
 
 # Create Cordova project
-cordova create test com.bridge.test Test
-cd $TRAVIS_BUILD_DIR/test
+cordova create $HOME/testApp com.bridge.test Test
+cd $HOME/testApp
 
 # Install Android platform
 cordova platform add android
@@ -16,4 +16,4 @@ cordova plugin add \
   http://git-wip-us.apache.org/repos/asf/cordova-plugin-test-framework.git
 
 # Add plugin and tests
-cordova plugin add ../
+cordova plugin add $TRAVIS_BUILD_DIR

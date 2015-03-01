@@ -2,7 +2,7 @@
 set -ev
 
 # Go to Cordova project directory
-cd $TRAVIS_BUILD_DIR/test
+cd $HOME/testApp
 
 # Build Android APK
 cordova build android
