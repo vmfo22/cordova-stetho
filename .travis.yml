@@ -9,10 +9,11 @@ android:
     - sys-img-x86-android-17
 install:
   - npm install -g cordova
-  - cordova create . com.bridge.test Test
+  - cordova create test com.bridge.test Test
+  - cd {{TRAVIS_BUILD_DIR}}
   - cordova platform add android
   - cordova plugin add http://git-wip-us.apache.org/repos/asf/cordova-plugin-test-framework.git
-  - cordova plugin add .
+  - cordova plugin add ../
 before_script:
   - echo no | android create avd --force -n test -t android-19 --abi armeabi-v7a
   - emulator -avd test -no-skin -no-audio -no-window &
