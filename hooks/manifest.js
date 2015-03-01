@@ -3,7 +3,7 @@ module.exports = function(context) {
   var dfd  = new Q.defer();
 
   dfd.resolve();
-  console.log('AndroidManifest.xml updated');
+  console.log('cordova-stetho - AndroidManifest.xml updated');
 
   return dfd.promise;
 };

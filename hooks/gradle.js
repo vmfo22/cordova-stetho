@@ -7,7 +7,7 @@ module.exports = function(context) {
     cwd: context.opts.plugin.dir
   }, function() {
     dfd.resolve();
-    console.log('Dependencies downloaded for Stetho');
+    console.log('cordova-stetho - Dependencies downloaded');
   });
 
   return dfd.promise;
