@@ -7,7 +7,7 @@ module.exports = function(context) {
     cwd: context.opts.plugin.dir
   }, function() {
     dfd.resolve();
-    console.log('cordova-stetho - Gradle dependencies downloaded');
+    console.log('cordova-stetho - Gradle dependencies installed');
   });
 
   return dfd.promise;
