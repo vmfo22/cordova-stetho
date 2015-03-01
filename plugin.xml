@@ -8,7 +8,7 @@
   <issue>https://github.com/disusered/cordova-stetho/issues</issue>
   <hook src="hooks/npm.js" type="before_plugin_install" />
   <hook src="hooks/gradle.js" type="before_plugin_install" />
-  <hook src="hooks/manifest.js" type="before_compile" />
+  <hook src="hooks/manifest.js" type="before_plugin_install" />
   <hook src="hooks/npm_rm.js" type="before_plugin_uninstall" />
   <platform name="android">
     <config-file parent="/*" target="res/xml/config.xml">
