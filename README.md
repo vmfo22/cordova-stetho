@@ -5,6 +5,10 @@ stetho
 
 Facebook's Stetho for Cordova
 
+<a href="https://raw.githubusercontent.com/disusered/cordova-stetho/docs/stetho.png">
+  <img src="https://raw.githubusercontent.com/disusered/cordova-stetho/docs/stetho.png" width="480px" />
+</a>
+
 ## Install
 ```bash
 cordova plugin add com.bridge.stetho
