@@ -1,6 +1,6 @@
 {
   "name": "cordova-stetho",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Facebook's Stetho for Cordova",
   "cordova": {
     "id": "com.disusered.stetho",
