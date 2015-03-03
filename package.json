@@ -29,6 +29,8 @@
   },
   "homepage": "https://github.com/disusered/cordova-stetho",
   "devDependencies": {
-    "xml2js": "^0.4.5"
+    "sax": "^0.6.1",
+    "xml2js": "^0.4.5",
+    "xmlbuilder": "^2.6.1"
   }
 }
