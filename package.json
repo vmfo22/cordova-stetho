@@ -27,5 +27,8 @@
   "bugs": {
     "url": "https://github.com/disusered/cordova-stetho/issues"
   },
-  "homepage": "https://github.com/disusered/cordova-stetho"
+  "homepage": "https://github.com/disusered/cordova-stetho",
+  "devDependencies": {
+    "xml2js": "^0.4.5"
+  }
 }
