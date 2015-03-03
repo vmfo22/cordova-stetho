@@ -1,0 +1,34 @@
+{
+  "name": "cordova-stetho",
+  "version": "0.2.1",
+  "description": "Facebook's Stetho for Cordova",
+  "cordova": {
+    "id": "com.bridge.stetho",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/disusered/cordova-stetho.git"
+  },
+  "keywords": [
+    "cordova",
+    "stetho",
+    "android",
+    "debug",
+    "devtools",
+    "development",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "Carlos Antonio",
+  "license": "GPLv2",
+  "bugs": {
+    "url": "https://github.com/disusered/cordova-stetho/issues"
+  },
+  "homepage": "https://github.com/disusered/cordova-stetho",
+  "devDependencies": {
+    "xml2js": "^0.4.5"
+  }
+}
