@@ -10,9 +10,9 @@ Facebook's Stetho for Cordova
 </a>
 
 ## Dependencies
-Cordova is in the processes of migrating their plugin registry to NPM, after which dependencies will resolve automatically. In the meantime, this plugin has a single dependency you need to install prior to use:
+Cordova is in the processes of migrating their plugin registry to NPM, after which dependencies will resolve automatically. In the meantime, this plugin has the following dependencies you need to install to your project prior to use:
 ```bash
-npm install xml2js --save-dev
+npm install xml2js sax xmlbuilder --save-dev
 ```
 
 ## Install
