@@ -8,6 +8,9 @@ npm install -g cordova
 cordova create $HOME/testApp com.bridge.test Test
 cd $HOME/testApp
 
+# Install dependency
+npm install xml2js --save-dev
+
 # Install Android platform
 cordova platform add android
 
