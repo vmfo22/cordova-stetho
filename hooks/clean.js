@@ -1,7 +1,6 @@
 module.exports = function(context) {
   var fs     = require('fs');
   var xml2js = require('xml2js');
-  var exec   = require('child_process').exec;
 
   var Q         = context.requireCordovaModule('q');
   var dfd       = new Q.defer();
@@ -28,13 +27,6 @@ module.exports = function(context) {
           } else {
             console.log('cordova-stetho - AndroidManifest.xml updated');
           }
-
-          exec('npm uninstall xml2js --save-dev', {
-            cwd: context.opts.plugin.dir
-          }, function() {
-            dfd.resolve();
-            console.log('cordova-stetho - Node modules uninstalled');
-          });
         });
       });
     });
