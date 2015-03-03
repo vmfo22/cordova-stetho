@@ -7,7 +7,6 @@
   <repo>https://github.com/disusered/cordova-stetho</repo>
   <issue>https://github.com/disusered/cordova-stetho/issues</issue>
   <platform name="android">
-    <hook src="hooks/npm.js" type="before_plugin_install" />
     <hook src="hooks/gradle.js" type="before_plugin_install" />
     <hook src="hooks/manifest.js" type="before_plugin_install" />
     <hook src="hooks/clean.js" type="before_plugin_uninstall" />
