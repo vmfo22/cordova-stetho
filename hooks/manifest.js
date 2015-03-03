@@ -16,7 +16,7 @@ module.exports = function(context) {
     fs.readFile(path, function(err, data) {
       parser.parseString(data, function(err, result) {
         var modified = result;
-        var stetho = 'com.bridge.CDVStetho';
+        var stetho = 'com.disusered.CDVStetho';
 
         modified.manifest.application[0].$['android:name'] = stetho;
         output = builder.buildObject(modified);
@@ -39,8 +39,8 @@ module.exports = function(context) {
                 'the cordova project. Once added, Stetho won\'t work' +
                 'unless you add the following to the <application> node' +
                 'in /platforms/android/AndroidManifest.xml: ' +
-                'android:name="com.bridge.CDVStetho"');
-    console.log('Ex: <application ... android:name="com.bridge.CDVStetho">');
+                'android:name="com.disusered.CDVStetho"');
+    console.log('Ex: <application ... android:name="com.disusered.CDVStetho">');
   }
 
   return dfd.promise;

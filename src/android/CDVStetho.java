@@ -10,7 +10,7 @@
  *
  */
 
-package com.bridge;
+package com.disusered;
 
 import android.app.Application;
 import com.facebook.stetho.Stetho;

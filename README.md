@@ -17,7 +17,7 @@ npm install xml2js sax xmlbuilder --save-dev
 
 ## Install
 ```bash
-cordova plugin add com.bridge.stetho
+cordova plugin add com.disusered.stetho
 ```
 
 ## Usage
