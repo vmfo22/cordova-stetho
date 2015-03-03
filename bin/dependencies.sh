@@ -9,7 +9,7 @@ cordova create $HOME/testApp com.bridge.test Test
 cd $HOME/testApp
 
 # Install dependency
-npm install xml2js --save-dev
+npm install xml2js sax xmlbuilder --save-dev
 
 # Install Android platform
 cordova platform add android
