@@ -26,10 +26,11 @@ module.exports = function(context) {
 
         function callback(err) {
           if (err) {
-            console.log('cordova-stetho - Error writing AndroidManifest.xml');
             console.log(err);
+            dfd.reject();
           } else {
-            console.log('cordova-stetho - AndroidManifest.xml updated');
+            console.log('Updating "com.disusered.stetho" AndroindManifest.xml');
+            dfd.resolve();
           }
         }
 
@@ -38,12 +39,12 @@ module.exports = function(context) {
           output = builder.buildObject(modified);
           fs.writeFile(path, output, callback);
         } catch (error) {
-          dfd.reject('Uninstall failed, AndroidManifest.xml was not updated!');
+          dfd.reject();
         }
       });
     });
   } else {
-    dfd.reject('Manifest not found at specified location');
+    dfd.reject();
   }
 
   return dfd.promise;
