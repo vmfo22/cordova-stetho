@@ -3,7 +3,7 @@
   "version": "0.2.4",
   "description": "Facebook's Stetho for Cordova",
   "cordova": {
-    "id": "com.bridge.stetho",
+    "id": "com.disusered.stetho",
     "platforms": [
       "android"
     ]
