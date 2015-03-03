@@ -9,6 +9,12 @@ Facebook's Stetho for Cordova
   <img src="https://raw.githubusercontent.com/disusered/cordova-stetho/docs/stetho.png" width="480px" />
 </a>
 
+## Dependencies
+Cordova is in the processes of migrating their plugin registry to NPM, after which dependencies will resolve automatically. In the meantime, this plugin has a single dependency you need to install prior to use:
+```bash
+npm install xml2js --save-dev
+```
+
 ## Install
 ```bash
 cordova plugin add com.bridge.stetho
