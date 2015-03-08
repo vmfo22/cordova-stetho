@@ -15,6 +15,12 @@ Cordova is in the processes of migrating their plugin registry to NPM, after whi
 npm install xml2js sax xmlbuilder --save-dev
 ```
 
+#### Windows Users
+There is an additional node dependency that needs to be installed on Windows.
+```bash
+npm install win-spawn --save-dev
+```
+
 ## Install
 ```bash
 cordova plugin add com.disusered.stetho
