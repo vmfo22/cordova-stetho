@@ -1,4 +1,4 @@
-module.exports = function(context) {
+function editManifest(op, context) {
   var fs     = require('fs');
   var xml2js = require('xml2js');
 
@@ -30,13 +30,17 @@ module.exports = function(context) {
             console.log(err);
             dfd.reject();
           } else {
-            console.log('Updating "com.disusered.stetho" AndroindManifest.xml');
+            console.log('Updating "com.disusered.stetho" AndroidManifest.xml');
             dfd.resolve();
           }
         }
 
         try {
-          modified.manifest.application[0].$['android:name'] = stetho;
+          if (op === 'add') {
+            modified.manifest.application[0].$['android:name'] = stetho;
+          } else if (op === 'delete') {
+            delete modified.manifest.application[0].$['android:name'];
+          }
           output = builder.buildObject(modified);
           fs.writeFile(path, output, callback);
         } catch (error) {
@@ -49,4 +53,9 @@ module.exports = function(context) {
   }
 
   return dfd.promise;
+}
+
+module.exports = {
+  add: editManifest.bind(this, 'add'),
+  delete: editManifest.bind(this, 'delete')
 };
