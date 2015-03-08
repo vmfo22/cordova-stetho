@@ -30,7 +30,7 @@ function editManifest(op, context) {
             console.log(err);
             dfd.reject();
           } else {
-            console.log('Updating "com.disusered.stetho" AndroidManifest.xml');
+            console.log('Updated AndroidManifest.xml');
             dfd.resolve();
           }
         }
