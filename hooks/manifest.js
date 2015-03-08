@@ -1,4 +1,4 @@
-module.exports = function(context) {
+function editManifest(op, context) {
   var fs     = require('fs');
   var xml2js = require('xml2js');
 
@@ -8,40 +8,54 @@ module.exports = function(context) {
   var builder   = new xml2js.Builder();
 
   var output;
-  var path = context.opts.projectRoot +
-             '/platforms/android/AndroidManifest.xml';
-  var androidExists = fs.existsSync(path);
+  var path;
 
-  if (androidExists) {
+  var manifestExists = false;
+
+  try {
+    path = context.opts.projectRoot + '/platforms/android/AndroidManifest.xml';
+    manifestExists = fs.existsSync(path);
+  } catch (error) {
+    dfd.reject();
+  }
+
+  if (manifestExists) {
     fs.readFile(path, function(err, data) {
       parser.parseString(data, function(err, result) {
         var modified = result;
         var stetho = 'com.disusered.CDVStetho';
 
-        modified.manifest.application[0].$['android:name'] = stetho;
-        output = builder.buildObject(modified);
-
-        fs.writeFile(path, output, function(err) {
+        function callback(err) {
           if (err) {
-            console.log('cordova-stetho - Error writing AndroidManifest.xml');
             console.log(err);
+            dfd.reject();
           } else {
-            console.log('cordova-stetho - AndroidManifest.xml updated');
+            console.log('Updating "com.disusered.stetho" AndroidManifest.xml');
+            dfd.resolve();
           }
-        });
+        }
 
-        dfd.resolve();
+        try {
+          if (op === 'add') {
+            modified.manifest.application[0].$['android:name'] = stetho;
+          } else if (op === 'delete') {
+            delete modified.manifest.application[0].$['android:name'];
+          }
+          output = builder.buildObject(modified);
+          fs.writeFile(path, output, callback);
+        } catch (error) {
+          dfd.reject();
+        }
       });
     });
   } else {
-    console.log('AndroidManifest.xml not found!');
-    console.log('This means the Android platform hasn\t been added to ' +
-                'the cordova project. Once added, Stetho won\'t work' +
-                'unless you add the following to the <application> node' +
-                'in /platforms/android/AndroidManifest.xml: ' +
-                'android:name="com.disusered.CDVStetho"');
-    console.log('Ex: <application ... android:name="com.disusered.CDVStetho">');
+    dfd.reject();
   }
 
   return dfd.promise;
+}
+
+module.exports = {
+  add: editManifest.bind(this, 'add'),
+  delete: editManifest.bind(this, 'delete')
 };
